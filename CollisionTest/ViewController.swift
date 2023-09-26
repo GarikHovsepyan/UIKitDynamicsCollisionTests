@@ -33,11 +33,11 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         slider2 = UISlider()
         slider3 = UISlider()
 
-       
+        view.backgroundColor = UIColor.lightGray
         
         
         // Create a container view to hold the animated views
-        let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 800, height: 350))
+        let containerView = UIView(frame: CGRect(x: 50, y: 0, width: 750, height: 375))
         containerView.backgroundColor = UIColor.lightGray
         self.view.addSubview(containerView)
 
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         var currentScale: CGFloat = 1.0 // Initial scale factor
             
         func zoomInButtonTapped() {
-            currentScale += 0.2 // Increase the scale factor by 0.2 for zooming in
+            currentScale += 0.1 // Increase the scale factor by 0.2 for zooming in
             
             UIView.animate(withDuration: 2) {
                 containerView.transform = CGAffineTransform(scaleX: currentScale, y: currentScale)
